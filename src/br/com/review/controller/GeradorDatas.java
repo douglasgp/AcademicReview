@@ -33,14 +33,10 @@ public class GeradorDatas {
 		int opcao = 0;
 		// mostra menu de opões
 		
-		System.out.println(
-				" = = = = = = = = = = = = = = = = = = = = =  MENU 1 - PRINCIPAL  = = = = = = = = = = = = = = = = = = = = = = = = = =  ");
-		System.out.printf("%8.28s | %-14.17s | %-20.25s | %-17.20s | %-17.10s |%s\n", "1. Gerencimento ",
-				"2. Gerenciamento", "3. Gerar datas", "4. Registrar datas ", "5. Sair da ", "0. Finalizar");
-		System.out.printf("%8.28s | %-11.19s | %-20.25s | %-17.18s | %-17.12s |%s\n", "   de datas    ",
-				" de arquivos (BD) ", "   de revisão        ", "    de aulas   ", "   aplicação", " Compra");
-		System.out.println(
-				" = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
+		System.out.println(" = = = = = = = = = = = = = = = = = = = = =  MENU 1 - PRINCIPAL  = = = = = = = = = = = = = = = = = = = = = = = = = =  ");
+		System.out.printf("%8.28s | %-14.17s | %-20.25s | %-17.20s | %-17.10s |%s\n", "1. Gerencimento ","2. Gerenciamento", "3. Gerar datas", "4. Registrar datas ", "5. Sair da ", "6. Gerar arq.");
+		System.out.printf("%8.28s | %-11.19s | %-20.25s | %-17.18s | %-17.12s |%s\n", "   de datas    "," de arquivos (BD) ", "   de revisão        ", "    de aulas   ", "   aplicação", " de disciplinas");
+		System.out.println(" = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
 
 		opcao = scan.nextInt();
 		// processa opção escolhida no menu
