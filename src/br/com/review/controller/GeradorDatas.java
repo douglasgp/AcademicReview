@@ -32,7 +32,7 @@ public class GeradorDatas {
 
 		int opcao = 0;
 		// mostra menu de opões
-
+		
 		System.out.println(
 				" = = = = = = = = = = = = = = = = = = = = =  MENU 1 - PRINCIPAL  = = = = = = = = = = = = = = = = = = = = = = = = = =  ");
 		System.out.printf("%8.28s | %-14.17s | %-20.25s | %-17.20s | %-17.10s |%s\n", "1. Gerencimento ",
@@ -101,14 +101,10 @@ public class GeradorDatas {
 		do {
 			// Exibe menu de opções
 
-			System.out.println(
-					" = = = = = = = = = = = = = = = = = = = = =  MENU 2 - Gerador Datas  = = = = = = = = = = = = = = = = = = = = = = = = = =  ");
-			System.out.printf("%14.31s | %-14.35s |%s\n", "1. Carregar disciplinas    ", " 3. Escolher Disciplina",
-					"5. Sair da aplicação");
-			System.out.printf("%11.31s | %-11.35s |%s\n", "2. Consultar datas de aulas",
-					" 4. Retornar ao Menu Principal   ", "6. Ajuda ");
-			System.out.println(
-					" = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
+			System.out.println(" = = = = = = = = = = = = = = = = = = = = =  MENU 2 - Gerador Datas  = = = = = = = = = = = = = = = = = = = = = = = = = =  ");
+			System.out.printf("%14.31s | %-14.35s |%s\n","1. Carregar disciplinas    "," 3. Escolher Disciplina","5. Sair da aplicação");
+			System.out.printf("%11.31s | %-11.35s |%s\n", "2. Consultar datas de aulas"," 4. Retornar ao Menu Principal   ", "6. Ajuda ");
+			System.out.println(" = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
 			opcao = scan.nextInt();
 			switch (opcao) {
 			case 1:
