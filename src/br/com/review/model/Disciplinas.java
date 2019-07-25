@@ -1,12 +1,31 @@
 package br.com.review.model;
 
 public class Disciplinas {
-	
+
 	private int id;
 	private String nomeDisciplina;
 	private int semestre;
 	private Professor professor;
 	private int totalHoras;
+	public int totalDiscSemestre;
+	
+	public int[] cargaHoraria = new int[totalDiscSemestre];
+
+	public int[] getCargaHoraria() {
+		return cargaHoraria;
+	}
+
+	public void setCargaHoraria(int[] cargaHoraria) {
+		this.cargaHoraria = cargaHoraria;
+	}
+
+	public int getTotalDiscSemestre() {
+		return totalDiscSemestre;
+	}
+
+	public void setTotalDiscSemestre(int totalDiscSemestre) {
+		this.totalDiscSemestre = totalDiscSemestre;
+	}
 
 	public int getId() {
 		return id;

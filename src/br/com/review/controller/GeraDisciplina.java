@@ -10,22 +10,21 @@ public class GeraDisciplina {
 	public static int CURSO = 0;
 	public static int[] LISTA_DISCIPLINA;
 	
-	public static int escolheListaDisciplinas(int opcao) {
+	public static void escolheListaDisciplinas() {
 		
-		
-		Curso.TOTAL_DISCIPLINA = GeradorDatas.retornaTotalDisciplinas(SEMESTRE);
-		System.out.println("Total de disciplinas: " + Curso.TOTAL_DISCIPLINA);
-		
-		//-- LISTA_DISCIPLINA = GeradorDatas.cargaHorariaSemestre(SEMESTRE);
-		
-		String listaDisciplina[] = GeradorDatas.disciplinasSemestral(SEMESTRE);
-		
-		System.out.println("Informe o curso: ");
-		for (int i = 0; i < listaDisciplina.length; i++) {
-			System.out.println((i+1)+". " + listaDisciplina[i]);
+		GeradorDatas.escolheDisciplinas();
+		System.out.println("Escrever disciplinas em arquivo?\n"
+				+ "1. Sim\n"
+				+ "2. Não");
+		int opcao = scan.nextInt();
+		if(opcao == 1) {
+			System.out.println("As seguintes disciplinas serão escritas no arquivo!");
+		}else if(opcao == 2) {
+			System.out.println("Disciplinas não serão gravadas em arquivo!");
+		}else {
+			System.out.println("Opção inválida!");
 		}
-		CURSO = scan.nextInt();
 		
-		return CURSO;
+		
 	}
 }

@@ -9,6 +9,7 @@ import java.util.GregorianCalendar;
 import java.util.Scanner;
 
 import br.com.review.model.Curso;
+import br.com.review.model.Disciplinas;
 
 public class GeradorDatas {
 	public static Scanner scan = new Scanner(System.in);
@@ -27,6 +28,8 @@ public class GeradorDatas {
 	public static int NUM_LIN = NUM_DISCIPLINA;
 	public static int NUM_COL = 3;
 	public static int dataAulas[][] = new int[NUM_LIN][NUM_COL];
+	
+	public static Disciplinas dis = new Disciplinas();
 
 	public static void menuPrincipal() throws Exception {
 
@@ -45,7 +48,9 @@ public class GeradorDatas {
 			menuDatas();
 			break;
 		case 2:
-			GeraDisciplina.escolheListaDisciplinas(opcao);
+			// GeraDisciplina.escolheListaDisciplinas(opcao);
+			System.out.println("Não configurado");
+			menuPrincipal();
 			break;
 		case 3:
 			criaDatasDisciplina();
@@ -110,7 +115,7 @@ public class GeradorDatas {
 				registraDataAula();
 				break;
 			case 3:
-				escolheDisciplinas();
+				GeraDisciplina.escolheListaDisciplinas();
 				break;
 			case 5:
 				abandonarNavio();
@@ -138,8 +143,8 @@ public class GeradorDatas {
 
 		// Solicita do usuário o semestre a consultar
 		System.out.println("Informe o semestre: ");
-		SEMESTRE = scan.nextInt();
-
+		dis.setSemestre(scan.nextInt());
+		
 		// Invoca o método para retornar o total de disciplinas
 		TOTAL_DISCIPLINA = retornaTotalDisciplinas(SEMESTRE);
 		// Invoca método para retornar VETOR com carga horária cada disciplina do
@@ -167,9 +172,10 @@ public class GeradorDatas {
 
 	public static int escolheDisciplinas() {
 		System.out.println("Informe o semestre: ");
-		int opcao = scan.nextInt();
-		SEMESTRE = GeraDisciplina.escolheListaDisciplinas(opcao);
-
+		SEMESTRE = scan.nextInt();
+		
+		TOTAL_DISCIPLINA = retornaTotalDisciplinas(SEMESTRE);
+		
 		Curso.TOTAL_DISCIPLINA = GeradorDatas.retornaTotalDisciplinas(SEMESTRE);
 		System.out.println("Total de disciplinas: " + Curso.TOTAL_DISCIPLINA);
 
