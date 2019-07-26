@@ -2,11 +2,11 @@ package br.com.review.model;
 
 public class Disciplinas {
 
-	private int id;
-	private String nomeDisciplina;
-	private int semestre;
-	private Professor professor;
-	private int totalHoras;
+	public int id;
+	public String nomeDisciplina;
+	public int semestre;
+	public Professor professor;
+	public int totalHoras;
 	public int totalDiscSemestre;
 	
 	public int[] cargaHoraria = new int[totalDiscSemestre];
