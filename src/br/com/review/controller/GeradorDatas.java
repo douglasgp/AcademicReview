@@ -31,6 +31,7 @@ public class GeradorDatas {
 	
 	public static Disciplinas dis = new Disciplinas();
 
+	// Método exibe MENU principal
 	public static void menuPrincipal() throws Exception {
 
 		int opcao = 0;
@@ -96,6 +97,7 @@ public class GeradorDatas {
 		}
 	}
 
+	// Método exibe MENU para genrenciamento de datas das aulas do semestre informado
 	public static void menuDatas() {
 		int opcao = 0;
 		int opcaoMenu = 0;
@@ -135,6 +137,7 @@ public class GeradorDatas {
 		}
 	}
 
+	// Método exibe lista de inf. de disciplinas do semestre informado
 	public static void carregarSemestre() {
 		String dataStr;
 		// Solicita o nome da disciplina
@@ -191,6 +194,7 @@ public class GeradorDatas {
 
 	}
 
+	// Método finaliza aplicação
 	public static void abandonarNavio() {
 		System.out.println("Saindo da aplicação ... ");
 		System.exit(0);
@@ -218,6 +222,7 @@ public class GeradorDatas {
 		return totalDisciplina;
 	}
 
+	// Método retorna vetor com carga horária de disciplinas do semestre informado
 	public static int[] cargaHorariaSemestre(int opcao) {
 		int mHoraAula[] = new int[TOTAL_DISCIPLINA];
 		if (opcao == 1) {
