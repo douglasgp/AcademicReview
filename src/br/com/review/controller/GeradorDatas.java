@@ -105,8 +105,8 @@ public class GeradorDatas {
 			// Exibe menu de opções
 
 			System.out.println(" = = = = = = = = = = = = = = = = = = = = =  MENU 2 - Gerador Datas  = = = = = = = = = = = = = = = = = = = = = = = = = =  ");
-			System.out.printf("%14.31s | %-14.35s |%s\n","1. Carregar disciplinas    "," 3. Escolher Disciplina","5. Sair da aplicação");
-			System.out.printf("%11.31s | %-11.35s |%s\n", "2. Consultar datas de aulas"," 4. Retornar ao Menu Principal   ", "6. Ajuda ");
+			System.out.printf("%14.31s | %-14.35s | %-14.35s |%s\n","1. Carregar disciplinas    "," 3. Escolher Disciplina       ","5. Sair da aplicação", "9. Ajuda ");
+			System.out.printf("%11.31s | %-11.35s | %-14.35s |%s\n", "2. Consultar datas de aulas"," 4. Retornar ao Menu Principal", "6. Gerar Datas","");
 			System.out.println(" = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = ");
 			opcao = scan.nextInt();
 			switch (opcao) {
@@ -168,9 +168,12 @@ public class GeradorDatas {
 		}
 		// Exibe carga/hora total do semestre
 		System.out.println("Total horas: " + CARGA_TOTAL_SEMESTRE);
+		
+		menuDatas();
 
 	}
 
+	// Método cria datas das aulas da cada disciplina do semestre informado
 	public static int escolheDisciplinas() {
 		System.out.println("Informe o semestre: ");
 		SEMESTRE = scan.nextInt();
