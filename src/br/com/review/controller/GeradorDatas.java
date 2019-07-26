@@ -27,6 +27,8 @@ public class GeradorDatas {
 	public static int NUM_DISCIPLINA = 3;
 	public static int NUM_LIN = NUM_DISCIPLINA;
 	public static int NUM_COL = 3;
+	
+	public static int CARGA_HORARIA[] = new int[TAMANHO];
 	public static int dataAulas[][] = new int[NUM_LIN][NUM_COL];
 	
 	public static Disciplinas dis = new Disciplinas();
@@ -154,15 +156,16 @@ public class GeradorDatas {
 		int cargaHorariaSemestre[] = cargaHorariaSemestre(SEMESTRE);
 		// Invoca método para retornar VETOR com nomes das disciplinas do semestre informado.
 		String nomesDisciplinas[] = disciplinasSemestral(SEMESTRE);
-
 		// Exibe resultado
 		System.out.println("Total de disciplinas: " + TOTAL_DISCIPLINA);
-
-		// Inicializa variável TAMANHO
-		TAMANHO = TOTAL_DISCIPLINA;
+		for (int i = 0; i < cargaHorariaSemestre.length; i++) {
+			CARGA_HORARIA[i] = cargaHorariaSemestre[i];
+			TAMANHO++;
+		}
 		// System.out.printf("%8.4s | %-14.17s | %-20.25s | %-17.20s | %-17.10s
 		// |%s\n","1. COD ", "2. Consultar datas ", "3. Consultar Carrinho","4. Retornar
 		// ao ", "5. Sair da ", "0. Finalizar");
+		
 		for (int i = 0; i < cargaHorariaSemestre.length; i++) {
 			System.out.println((i + 1) + ". " + nomesDisciplinas[i] + " - " + cargaHorariaSemestre[i]);
 		}
@@ -175,6 +178,15 @@ public class GeradorDatas {
 
 	// Método cria datas das aulas da cada disciplina do semestre informado
 	public static int escolheDisciplinas() {
+		int opcao = 0;
+		do {
+			System.out.println(" = = = = Gerar Datas Aulas = = = = ");
+			System.out.println("Escolha uma disciplina:\n");
+			for (int i = 0; i < dataAulas.length; i++) {
+				
+			}
+		} while (opcao == 0);
+		
 		System.out.println("Informe o semestre: ");
 		SEMESTRE = scan.nextInt();
 		
