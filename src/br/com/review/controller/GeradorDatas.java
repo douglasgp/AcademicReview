@@ -143,15 +143,13 @@ public class GeradorDatas {
 
 		// Solicita do usuário o semestre a consultar
 		System.out.println("Informe o semestre: ");
-		dis.setSemestre(scan.nextInt());
+		SEMESTRE = scan.nextInt();
 		
 		// Invoca o método para retornar o total de disciplinas
 		TOTAL_DISCIPLINA = retornaTotalDisciplinas(SEMESTRE);
-		// Invoca método para retornar VETOR com carga horária cada disciplina do
-		// semestre informado
+		// Invoca método para retornar VETOR com carga horária cada disciplina do semestre informado
 		int cargaHorariaSemestre[] = cargaHorariaSemestre(SEMESTRE);
-		// Invoca método para retornar VETOR com nomes das disciplinas do semestre
-		// informado.
+		// Invoca método para retornar VETOR com nomes das disciplinas do semestre informado.
 		String nomesDisciplinas[] = disciplinasSemestral(SEMESTRE);
 
 		// Exibe resultado
@@ -221,7 +219,7 @@ public class GeradorDatas {
 	}
 
 	public static int[] cargaHorariaSemestre(int opcao) {
-		int mHoraAula[] = new int[dis.getTotalDiscSemestre()];
+		int mHoraAula[] = new int[TOTAL_DISCIPLINA];
 		if (opcao == 1) {
 			int horasSem1[] = { 80, 80, 80, 80, 80, 80, 80, 40 };
 			for (int i = 0; i < mHoraAula.length; i++) {
@@ -250,7 +248,7 @@ public class GeradorDatas {
 		return mHoraAula;
 	}
 
-	// Método retorna total de aulas da disciplina selecinada
+	// Método retorna nomes das disciplinas do semestre selecinado
 	public static String[] disciplinasSemestral(int opcao) {
 		String disciplinas[] = new String[TOTAL_DISCIPLINA];
 		if (opcao == 1) {
