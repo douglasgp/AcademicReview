@@ -221,7 +221,7 @@ public class GeradorDatas {
 	}
 
 	public static int[] cargaHorariaSemestre(int opcao) {
-		int mHoraAula[] = new int[TOTAL_DISCIPLINA];
+		int mHoraAula[] = new int[dis.getTotalDiscSemestre()];
 		if (opcao == 1) {
 			int horasSem1[] = { 80, 80, 80, 80, 80, 80, 80, 40 };
 			for (int i = 0; i < mHoraAula.length; i++) {
