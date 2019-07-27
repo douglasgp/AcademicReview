@@ -5,6 +5,20 @@ public class Professor {
 	private int id;
 	private String nomeProfessor;
 	private Disciplinas disciplina;
+	private String email;
+	
+	public Professor(String nomeProf, String eMail) {
+		nomeProfessor = nomeProf;
+		email = eMail;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
 	public int getId() {
 		return id;
