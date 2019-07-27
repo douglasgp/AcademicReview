@@ -29,10 +29,9 @@ public class GeradorDatas {
 	public static int NUM_COL = 3;
 	
 	public static int CARGA_HORARIA[] = new int[TAMANHO];
+	public static String[] NOME_DISCIPLINAS = new String[TOTAL_DISCIPLINA];
 	public static int dataAulas[][] = new int[NUM_LIN][NUM_COL];
 	
-	public static Disciplinas dis = new Disciplinas();
-
 	// Método exibe MENU principal
 	public static void menuPrincipal() throws Exception {
 
@@ -158,16 +157,9 @@ public class GeradorDatas {
 		String nomesDisciplinas[] = disciplinasSemestral(SEMESTRE);
 		// Exibe resultado
 		System.out.println("Total de disciplinas: " + TOTAL_DISCIPLINA);
-		for (int i = 0; i < cargaHorariaSemestre.length; i++) {
-			CARGA_HORARIA[i] = cargaHorariaSemestre[i];
-			TAMANHO++;
-		}
-		// System.out.printf("%8.4s | %-14.17s | %-20.25s | %-17.20s | %-17.10s
-		// |%s\n","1. COD ", "2. Consultar datas ", "3. Consultar Carrinho","4. Retornar
-		// ao ", "5. Sair da ", "0. Finalizar");
 		
 		for (int i = 0; i < cargaHorariaSemestre.length; i++) {
-			System.out.println((i + 1) + ". " + nomesDisciplinas[i] + " - " + cargaHorariaSemestre[i]);
+			System.out.println((i + 1) + ". " + NOME_DISCIPLINAS[i] + " - " + cargaHorariaSemestre[i]);
 		}
 		// Exibe carga/hora total do semestre
 		System.out.println("Total horas: " + CARGA_TOTAL_SEMESTRE);
@@ -179,12 +171,15 @@ public class GeradorDatas {
 	// Método cria datas das aulas da cada disciplina do semestre informado
 	public static int escolheDisciplinas() {
 		int opcao = 0;
+		int cont = 0;
+		int vetDisc[] = new int[cont];
 		do {
 			System.out.println(" = = = = Gerar Datas Aulas = = = = ");
-			System.out.println("Escolha uma disciplina:\n");
-			for (int i = 0; i < dataAulas.length; i++) {
-				
+			System.out.println("Adicione uma disciplina ao semestre:\n");
+			for (int i = 0; i < NOME_DISCIPLINAS.length; i++) {
+				System.out.println((i+1)+". " + NOME_DISCIPLINAS[i]);
 			}
+			vetDisc[cont] = scan.nextInt();
 		} while (opcao == 0);
 		
 		System.out.println("Informe o semestre: ");
@@ -275,7 +270,7 @@ public class GeradorDatas {
 			String disciplinaSem1[] = { "ILM001", "ISI002", "IAL002", "IAC001", "AAG001", "MMD001", "LPO001",
 					"LIN100" };
 			for (int i = 0; i < disciplinaSem1.length; i++) {
-				disciplinas[i] = disciplinaSem1[i];
+				NOME_DISCIPLINAS[i] = disciplinaSem1[i];
 			}
 		} else if (opcao == 2) {
 			String disciplinaSem2[] = { "IES100", "ILP010", "ILP502", "IHW100", "ISO100", "MET100", "MCA002", "CCG006",
