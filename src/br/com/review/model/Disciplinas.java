@@ -8,15 +8,15 @@ public class Disciplinas {
 	private int totalHoras;
 	private String objetivo;
 	private String ementa;
-	private String Bibliografia;
+	private Bibliografia bibliografia;
 	
-	public Disciplinas(String nomeDisc, Professor prof, int totalHs, String obj, String emen, String biblio) {
+	public Disciplinas(String nomeDisc, Professor prof, int totalHs, String obj, String emen, Bibliografia biblio) {
 		nomeDisciplina = nomeDisc;
 		professor = prof;
 		totalHoras = totalHs;
 		objetivo = obj;
 		ementa = emen;
-		Bibliografia = biblio;
+		bibliografia = biblio;
 	}
 
 	public String getObjetivo() {
@@ -35,12 +35,12 @@ public class Disciplinas {
 		this.ementa = ementa;
 	}
 
-	public String getBibliografia() {
-		return Bibliografia;
+	public Bibliografia getBibliografia() {
+		return bibliografia;
 	}
 
 	public void setBibliografia(String bibliografia) {
-		Bibliografia = bibliografia;
+		bibliografia = bibliografia;
 	}
 
 	public int getId() {
