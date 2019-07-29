@@ -89,18 +89,11 @@ public class MethodsReview {
 	
 
 	// Método retorna descrição das disciplinas
-	public static String[] descricaoDisciplinas(int semestre, int qtdDisc) {
-		// String biblio = "biblio"+contBibli;
-		
-		do {
-			
-		} while (condition);
+	public static Bibliografia[] descricaoDisciplinas(int semestre, int qtdDisc) {
+
 		Bibliografia[] biblio = new Bibliografia[contBibli];
-		if(semestre == 1) {
-			Bibliografia[] biblio = new Bibliografia("BROWN, C. E.; PETRUSCA, R.","Programando em ACCESS com VBA", "Alta Books", 2006);
-		} else if(semestre == 2) {
-			
-		}
+		
+		return biblio;
 		
 	}
 
