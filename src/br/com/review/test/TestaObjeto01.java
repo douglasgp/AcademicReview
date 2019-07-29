@@ -25,6 +25,8 @@ public class TestaObjeto01 {
 		
 		System.out.println("Qtd disciplinas: " + totalDiscSemestre);
 		for (int i = 0; i < horasDiscSemestre.length; i++) {
+			System.out.println((i + 1) + ". " + nomeDiscSemestre[i] + " - " + horasDiscSemestre[i]);
+			TOTAL_HORAS_SEMESTRE += horasDiscSemestre[i];
 			System.out.println((i + 1) + ". " + nomesDisc[i] + " - "+ horasDiscSemestre[i]);
 		}
 
