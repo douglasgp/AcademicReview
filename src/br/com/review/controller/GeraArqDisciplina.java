@@ -6,16 +6,19 @@ import br.com.review.model.Disciplinas;
 
 public class GeraArqDisciplina {
 	public static Scanner scan = new Scanner(System.in);
-	public static int TOTAL_DISC_SEMESTRE = 0;
-	public static String[] OBJ_DISC = new String[TOTAL_DISC_SEMESTRE];
-	public static String[] EMENTA_DISC = new String[TOTAL_DISC_SEMESTRE];
-	public static String[] BIBLIO_DISC = new String[TOTAL_DISC_SEMESTRE];
 	
-	public static int[] CARGA_DISC = new int[TOTAL_DISC_SEMESTRE];
-	public static String[] NOME_DISC = new String[TOTAL_DISC_SEMESTRE];
+	public static int TAMANHO;
 	
-	public static void disciplinaSemestre() {
+	
+	public static void main(String[] args) {
+		System.out.println("Informe o semestre: ");
+		int semestre = scan.nextInt();
+		int qtdDisc = MethodsReview.retornaTotalDisciplinas(semestre);
 		
-		
-	}
+		// int[] referencia = {00+semestre, 01+semestre};
+		String[] sigla = MethodsReview.disciplinasSemestral(semestre, qtdDisc);
+		String[] denominacao = MethodsReview.denominacaoDisc(semestre, qtdDisc);
+		int[] cargaHs = MethodsReview.cargaHorariaSemestre(semestre, qtdDisc);
+				
+		}
 }
