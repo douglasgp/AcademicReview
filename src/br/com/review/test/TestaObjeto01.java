@@ -57,7 +57,6 @@ public class TestaObjeto01 {
 			
 			// DISC_SEM_ATUAL[cont] = scan.nextInt();
 			
-			// DISC_SEM_ATUAL[cont] = scan.nextInt();
 			cont++;
 		} while (opcao == 0);
 		menuPrincipal();
