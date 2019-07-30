@@ -18,7 +18,14 @@ public class TestaObjeto01 {
 		menuPrincipal();
 	}
 	public static void exibeSemestre() {
-		System.out.println();
+		if(NOMES_DISCIPLINAS.length > 0) {
+			for (int i = 0; i < DISC_SEM_ATUAL.length; i++) {
+				System.out.println((i+1)+". " + NOMES_DISCIPLINAS[i]);
+			}
+		}else {
+			System.out.println("Semestre vazio!\nAdicione alguma disciplina ao Semestre!");
+			menuPrincipal();
+		}
 	}
 	public static void carregaSemestre() {
 		System.out.println("Informe o semestre: ");
@@ -41,15 +48,14 @@ public class TestaObjeto01 {
 		int selecionaDisc = 0;
 		int cont = 0;
 		do {
-			System.out.println(" = = = = = = = = = = = = = = = MENU PRINCIPAL = = = = = = = = = = = = = = = \n");
+			System.out.println(" = = = = = = = = = = = = = = = MENU 2 - SEMESTRE = = = = = = = = = = = = = = = \n");
 			System.out.printf("%14.18s | %-14.18s | %-20.25s | %-17.20s | %-17.10s | %s\n", "1. Adicionar disciplina","2. Consultar Semestre ", "3. NÃO CONFIGURADO", "4. NÃO CONFIGURADO", "5. NÃO CONFIGURADO", "0. Voltar");
 			
 			System.out.println("Escolha a " + (cont+1)+"ª disciplina:");
 			selecionaDisc = scan.nextInt();
 			NOMES_DISCIPLINAS[cont] = nomesDisc[selecionaDisc];
 			
-			DISC_SEM_ATUAL[cont] = scan.nextInt();
-			
+			// DISC_SEM_ATUAL[cont] = scan.nextInt();
 			cont++;
 		} while (opcao == 0);
 		menuPrincipal();
@@ -58,7 +64,7 @@ public class TestaObjeto01 {
 	public static void menuPrincipal() {
 		int opcao = 0;
 		do {
-			System.out.println(" = = = = = = = = = = = = = = = MENU PRINCIPAL = = = = = = = = = = = = = = = \n");
+			System.out.println(" = = = = = = = = = = = = = = = MENU 1 - PRINCIPAL = = = = = = = = = = = = = = = \n");
 			System.out.printf("%14.18s | %-14.18s | %-20.25s | %-17.20s | %-17.10s | %s\n", "1. Gerir Semestre","2. Consultar Registro ", "3. NÃO CONFIGURADO", "4. NÃO CONFIGURADO", "5. NÃO CONFIGURADO", "0. Finalizar");
 			opcao = scan.nextInt();
 			switch (opcao) {
@@ -66,7 +72,8 @@ public class TestaObjeto01 {
 				carregaSemestre();
 				break;
 			case 2:
-				System.out.println("Não configurado");
+				exibeSemestre();
+				// System.out.println("Não configurado");
 				break;
 			default:
 				break;
