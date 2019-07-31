@@ -29,7 +29,6 @@ public class MethodsReview {
 
 	// Método retorna vetor com carga horária de disciplinas do semestre informado
 	public static int[] cargaHorariaSemestre(int semestre, int qtdDisc) {
-		int totalDisciplina = 0;
 		int mHoraAula[] = new int[qtdDisc];
 		if (semestre == 1) {
 			int horasSem1[] = { 80, 80, 80, 80, 80, 80, 80, 40 };
@@ -135,10 +134,61 @@ public class MethodsReview {
 		return disciplinas;
 	}
 
+	// Método retorna numero de referência das disciplinas do semestre selecionado
+	public static int[] referenciaDisc(int semestre, int qtdDisc) {
+		int vetRef[] = new int[qtdDisc];
+		switch (semestre) {
+		case 1:
+			int vetRefSem1[] = { 101, 112, 122, 141, 151, 171, 181, 180};
+			for (int i = 0; i < vetRefSem1.length; i++) {
+				vetRef[i] = vetRefSem1[i];
+			}
+			break;
+		case 2:
+			int vetRefSem2[] = {200,210,222,220,230,240,252,266,270};
+			for (int i = 0; i < vetRefSem2.length; i++) {
+				vetRef[i] = vetRefSem2[i];
+			}
+			break;
+		case 3:
+			int vetRefSem3[] = {300,311,321,333,340,352,361,370,380};
+			for (int i = 0; i < vetRefSem3.length; i++) {
+				vetRef[i] = vetRefSem3[i];
+			}
+			break;
+		case 4:
+			int vetRefSem4[] = {400,417,420,438,446,453,462,470};
+			for (int i = 0; i < vetRefSem4.length; i++) {
+				vetRef[i] = vetRefSem4[i];
+			}
+			break;
+		case 5:
+			int vetRefSem5[] = {501,512,531,542,551,560,570};
+			for (int i = 0; i < vetRefSem5.length; i++) {
+				vetRef[i] = vetRefSem5[i];
+			}
+			break;
+		case 6:
+			int vetRefSem6[] = {603,613,621,630,642,651};
+			for (int i = 0; i < vetRefSem6.length; i++) {
+				vetRef[i] = vetRefSem6[i];
+			}
+			break;
+		default:
+			break;
+		}
+		return vetRef;
+	}
+	
 	// Método retorna descrição das disciplinas
 	public static Bibliografia[] descricaoDisciplinas(int semestre, int qtdDisc) {
-
-		Bibliografia[] biblio = new Bibliografia[contBibli];
+		Bibliografia[] biblio = new Bibliografia[4];
+		if(semestre == 1) {
+			for (int i = 0; i < qtdDisc; i++) {
+				
+			}
+		}
+		
 		
 		return biblio;
 		
