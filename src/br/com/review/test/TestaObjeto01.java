@@ -38,7 +38,7 @@ public class TestaObjeto01 {
 
 		int horasDiscSemestre[] = MethodsReview.cargaHorariaSemestre(semestre, TOTAL_DISC_SEMESTRE);
 		
-		String[] nomesDisc = MethodsReview.disciplinasSemestral(semestre, TOTAL_DISC_SEMESTRE);
+		String[] nomesDisc = MethodsReview.siglaDisc(semestre, TOTAL_DISC_SEMESTRE);
 		
 		String[] denominacaoDisc = MethodsReview.denominacaoDisc(semestre, TOTAL_DISC_SEMESTRE);
 
