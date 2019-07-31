@@ -55,7 +55,7 @@ public class MethodsReview {
 	}
 
 	// Método retorna sigas das disciplinas do semestre selecinado
-		public static String[] disciplinasSemestral(int semestre, int qtdDisc) {
+		public static String[] siglaDisc(int semestre, int qtdDisc) {
 			String disciplinas[] = new String[qtdDisc];
 			if (semestre == 1) {
 				String disciplinaSem1[] = { "ILM001", "ISI002", "IAL002", "IAC001", "AAG001", "MMD001", "LPO001","LIN100" };
@@ -100,7 +100,7 @@ public class MethodsReview {
 			for (int i = 0; i < disciplinaSem1.length; i++) {
 				disciplinas[i] = disciplinaSem1[i];
 			}
-		} else if (semestre == 1) {
+		} else if (semestre == 2) {
 			String disciplinaSem2[] = { "Engenharia de Software", "Linguagem de Programção", "Programação de Scripts", "Laboratório de Hardware", 
 					"Sistemas Operacionais I", "Estatística Aplicada", "Cálculo","Contabilidade","Inglês II" };
 			for (int i = 0; i < disciplinaSem2.length; i++) {
@@ -182,13 +182,17 @@ public class MethodsReview {
 	
 	// Método retorna descrição das disciplinas
 	public static Bibliografia[] descricaoDisciplinas(int semestre, int qtdDisc) {
-		Bibliografia[] biblio = new Bibliografia[4];
+		int itensBibio = 0;
+		Bibliografia[][] vetAutor = new Bibliografia[itensBibio][qtdDisc];
+		Bibliografia[] vetTitulo = new Bibliografia[itensBibio];
+		Bibliografia[] vetEditora = new Bibliografia[itensBibio];
+		Bibliografia[] vetAno = new Bibliografia[itensBibio];
 		if(semestre == 1) {
-			for (int i = 0; i < qtdDisc; i++) {
-				
-			}
+			
 		}
 		
+		String biblioAutor1[][] = {"BROWN, C. E.; PETRUSCA, R."};
+			
 		
 		return biblio;
 		
