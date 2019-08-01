@@ -218,6 +218,34 @@ public class MethodsReview {
 		return vetRef;
 	}
 	
-	
+	// Método retorna descrição das disciplinas
+		public static Bibliografia[][] descricaoDisciplinas(int semestre, int qtdDisc) {
+			int itensBibio = 0;
+			int qtdBiblio = 0;
+			Bibliografia[][] matBiblio = new Bibliografia[qtdBiblio][qtdDisc];
+			
+			Bibliografia[][] vetAutor = new Bibliografia[itensBibio][qtdDisc];
+			Bibliografia[] vetTitulo = new Bibliografia[itensBibio];
+			Bibliografia[] vetEditora = new Bibliografia[itensBibio];
+			Bibliografia[] vetAno = new Bibliografia[itensBibio];
+			if(semestre == 1) {
+				for (int i = 0; i < vetAno.length; i++) {
+					for (int j = 0; j < vetAno.length; j++) {
+						
+					}
+					
+				}
+				matBiblio[0][0].setAutor("BROWN, C. E.; PETRUSCA, R.");
+				matBiblio[0][1].setTitulo("Programando em ACCESS com VBA");
+				matBiblio[0][2].setEditora("Alta Books");
+				matBiblio[0][3].setAno(2006);
+				for (int i = 0; i < qtdDisc; i++) {
+					
+				}
+			}
+					
+			return matBiblio;
+			
+		}
 
 }
