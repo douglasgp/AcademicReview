@@ -221,26 +221,22 @@ public class MethodsReview {
 	// Método retorna descrição das disciplinas
 		public static Bibliografia[][] descricaoDisciplinas(int semestre, int qtdDisc) {
 			int itensBibio = 0;
-			int qtdBiblio = 0;
-			Bibliografia[][] matBiblio = new Bibliografia[qtdBiblio][qtdDisc];
+			Bibliografia[][] matBiblio = new Bibliografia[itensBibio][qtdDisc];
 			
-			Bibliografia[][] vetAutor = new Bibliografia[itensBibio][qtdDisc];
 			Bibliografia[] vetTitulo = new Bibliografia[itensBibio];
 			Bibliografia[] vetEditora = new Bibliografia[itensBibio];
 			Bibliografia[] vetAno = new Bibliografia[itensBibio];
 			if(semestre == 1) {
-				for (int i = 0; i < vetAno.length; i++) {
-					for (int j = 0; j < vetAno.length; j++) {
+				String[][] vetAutor = {{"BROWN, C. E.; PETRUSCA, R."," LAUDON, Kenneth C.; Laudon J.P.","ASCENCIO, A. F. G, CAMPOS, E. A. V."},
+						{"FERNANDES, M","POTTER, R; RAINER JR, R K.","FORBELLONE, L. V., EBERSPACHER, H. F."},{"ZIVIANI, Nivio."},
+						{""}};
+				int[] vetDisc = new int[qtdDisc];
+				for (int i = 0; i < vetDisc.length; i++) {
+					int[] qtdBiblio = qtdRefBiblio(semestre, qtdDisc);
+					for (int j = 0; j < qtdBiblio.length; j++) {
+						
 						
 					}
-					
-				}
-				matBiblio[0][0].setAutor("BROWN, C. E.; PETRUSCA, R.");
-				matBiblio[0][1].setTitulo("Programando em ACCESS com VBA");
-				matBiblio[0][2].setEditora("Alta Books");
-				matBiblio[0][3].setAno(2006);
-				for (int i = 0; i < qtdDisc; i++) {
-					
 				}
 			}
 					
