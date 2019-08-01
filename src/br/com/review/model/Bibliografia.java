@@ -2,12 +2,12 @@ package br.com.review.model;
 
 public class Bibliografia {
 
+	private String[] autor;
 	private String titulo;
-	private String autor;
 	private String editora;
 	private int ano;
 	
-	public Bibliografia(String bAutor, String bTitulo, String bEditora, int bAno) {
+	public Bibliografia(String[] bAutor, String bTitulo, String bEditora, int bAno) {
 		autor = bAutor;
 		titulo = bTitulo;
 		editora = bEditora;
@@ -22,11 +22,11 @@ public class Bibliografia {
 		this.titulo = titulo;
 	}
 
-	public String getAutor() {
+	public String[] getAutor() {
 		return autor;
 	}
 
-	public void setAutor(String autor) {
+	public void setAutor(String[] autor) {
 		this.autor = autor;
 	}
 
