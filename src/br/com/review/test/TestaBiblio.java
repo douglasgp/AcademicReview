@@ -9,6 +9,12 @@ public class TestaBiblio {
 	public static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
+
+		// Bibliografia[] biblio = {"Alberto", bTitulo, bEditora, bAno};
+	}
+	
+	public static void insereBiblio() {
 		System.out.println("Informe o semestre: ");
 		int semestre = scan.nextInt();
 
@@ -33,8 +39,6 @@ public class TestaBiblio {
 			}
 			System.out.println();
 		}
-
-		// Bibliografia[] biblio = {"Alberto", bTitulo, bEditora, bAno};
 	}
 
 }
