@@ -92,7 +92,7 @@ public class MethodsReview {
 		return mHoraAula;
 	}
 
-	// Método retorna sigas das disciplinas do semestre selecinado
+	// Método retorna siglas das disciplinas do semestre selecinado
 		public static String[] siglaDisc(int semestre, int qtdDisc) {
 			String disciplinas[] = new String[qtdDisc];
 			if (semestre == 1) {
