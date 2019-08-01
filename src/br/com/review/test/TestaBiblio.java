@@ -22,15 +22,16 @@ public class TestaBiblio {
 			System.out.println("= = = " + (i + 1) + "º disciplina: " + siglaDisc[i] + " = = = ");
 			for (int j = 0; j < totalRefBiblio[j]; j++) {
 				System.out.println((j + 1) + "º Autor: ");
-				vetAutor[i][j] = scan.nextLine();
+				
 			}
 		}
 		
 		for (int i = 0; i < totalDisc; i++) {
-			System.out.println(siglaDisc[i]);
+			System.out.println("Disciplina: " + siglaDisc[i]);
 			for (int j = 0; j < totalRefBiblio[i]; j++) {
 				System.out.println(vetAutor[i][j]);
 			}
+			System.out.println();
 		}
 
 		// Bibliografia[] biblio = {"Alberto", bTitulo, bEditora, bAno};
