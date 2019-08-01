@@ -43,10 +43,13 @@ public class TestaObjeto01 {
 		String[] denominacaoDisc = MethodsReview.denominacaoDisc(semestre, TOTAL_DISC_SEMESTRE);
 
 		System.out.println("Qtd disciplinas: " + TOTAL_DISC_SEMESTRE);
-		
+		/*
 		for (int i = 0; i < horasDiscSemestre.length; i++) {
 			System.out.println((i + 1) + ". " + nomesDisc[i] + " - " + denominacaoDisc[i] + " - " + horasDiscSemestre[i] + " hs");
 			TOTAL_HORAS_SEMESTRE += horasDiscSemestre[i];
+		}*/
+		for (int i = 0; i < horasDiscSemestre.length; i++) {
+			System.out.println(nomesDisc[i]);
 		}
 		System.out.println("Total Horas: " + TOTAL_HORAS_SEMESTRE);
 		int opcao = 0;

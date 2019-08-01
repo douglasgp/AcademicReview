@@ -26,7 +26,45 @@ public class MethodsReview {
 
 		return totalDisciplina;
 	}
-
+	
+	// Retornar total de referências bibliográficas por disciplina do semestre informado
+		public static int[] qtdRefBiblio(int semestre, int qtdDisc) {
+			int totalRefBiblio[] = new int[qtdDisc];
+			if(semestre == 1) {
+				int[] refBiblio1 = {2, 2, 3, 3, 2, 2, 3, 4};
+				for (int i = 0; i < refBiblio1.length; i++) {
+					totalRefBiblio[i] = refBiblio1[i];
+				}
+			} else if(semestre == 2) {
+				int[] refBiblio2 = {2, 3, 0, 2, 2, 3, 1, 2, 5};
+				for (int i = 0; i < refBiblio2.length; i++) {
+					totalRefBiblio[i] = refBiblio2[i];
+				}
+			} else if(semestre == 3) {
+				int[] refBiblio3 = {3, 3, 3, 0, 2, 3, 2, 2, 5};
+				for (int i = 0; i < refBiblio3.length; i++) {
+					totalRefBiblio[i] = refBiblio3[i];
+				}
+			} else if(semestre == 4) {
+				int[] refBiblio4 = {3, 3, 3, 4, 4, 5, 2, 4};
+				for (int i = 0; i < refBiblio4.length; i++) {
+					totalRefBiblio[i] = refBiblio4[i];
+				}
+			} else if(semestre == 5) {
+				int[] refBiblio5 = {3, 3, 2, 2, 3, 4, 0};
+				for (int i = 0; i < refBiblio5.length; i++) {
+					totalRefBiblio[i] = refBiblio5[i];
+				}
+			} else if(semestre == 6) {
+				int[] refBiblio6 = {2, 5, 5, 4, 0, 1};
+				for (int i = 0; i < refBiblio6.length; i++) {
+					totalRefBiblio[i] = refBiblio6[i];
+				}
+			}
+			
+			return totalRefBiblio;
+		}
+	
 	// Método retorna vetor com carga horária de disciplinas do semestre informado
 	public static int[] cargaHorariaSemestre(int semestre, int qtdDisc) {
 		int mHoraAula[] = new int[qtdDisc];
@@ -180,22 +218,6 @@ public class MethodsReview {
 		return vetRef;
 	}
 	
-	// Método retorna descrição das disciplinas
-	public static Bibliografia[] descricaoDisciplinas(int semestre, int qtdDisc) {
-		int itensBibio = 0;
-		Bibliografia[][] vetAutor = new Bibliografia[itensBibio][qtdDisc];
-		Bibliografia[] vetTitulo = new Bibliografia[itensBibio];
-		Bibliografia[] vetEditora = new Bibliografia[itensBibio];
-		Bibliografia[] vetAno = new Bibliografia[itensBibio];
-		if(semestre == 1) {
-			
-		}
-		
-		String biblioAutor1[][] = {"BROWN, C. E.; PETRUSCA, R."};
-			
-		
-		return biblio;
-		
-	}
+	
 
 }
