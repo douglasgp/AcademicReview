@@ -30,8 +30,8 @@ public class TestaBiblio {
 					{"SCHEINERMAN, E.R.", "SULLIVAN, Michael; MIZRAHI, Abe."},
 					{"CINTRA; CUNHA.","FERREIRA, Aurélio Buarque de Holanda.","MARTINS, D S; ZILBERKNOP."},
 					{"HUGES, John et al.","MURPHY, Raymond.", "POSITIVO INFORMÁTICA.", "RICHARDS, Jack C."}};
-			for (int i = 0; i < totalDisc; i++) {
-				for (int j = 0; j < totalRefBiblio[i]; j++) {
+			for (int i = 0; i < totalDisc; i++) {				
+				for (int j = 0; j < totalRefBiblio[i]; j++) {					
 					BIBLIO_AUTOR[i][j] = matAutor[i][j];
 				}
 			}
@@ -40,8 +40,11 @@ public class TestaBiblio {
 		
 		for (int i = 0; i < totalDisc; i++) {
 			System.out.println("= = = " + (i + 1) + "º disciplina: " + siglaDisc[i] + " = = = ");
+			System.out.printf("%-1s | %10.28s   ", "> ID < ","> AUTOR <");
+			System.out.println();
 			for (int j = 0; j < totalRefBiblio[i]; j++) {
-				System.out.println((j + 1) + "º Autor: "+ BIBLIO_AUTOR[i][j]);
+				System.out.printf("%7s | %14.10S ",(j + 1), BIBLIO_AUTOR[i][j]);
+				System.out.println();
 			}
 			System.out.println();
 		}
