@@ -219,7 +219,7 @@ public class MethodsReview {
 	}
 	
 	// Método retorna descrição das disciplinas
-		public static Bibliografia[][] descricaoDisciplinas(int semestre, int qtdDisc) {
+		public static Bibliografia[][] gerenciaMatrizBibliografica(int semestre, int qtdDisc) {
 			int itensBibio = 0;
 			Bibliografia[][] matBiblio = new Bibliografia[itensBibio][qtdDisc];
 			
@@ -227,9 +227,15 @@ public class MethodsReview {
 			Bibliografia[] vetEditora = new Bibliografia[itensBibio];
 			Bibliografia[] vetAno = new Bibliografia[itensBibio];
 			if(semestre == 1) {
-				String[][] vetAutor = {{"BROWN, C. E.; PETRUSCA, R."," LAUDON, Kenneth C.; Laudon J.P.","ASCENCIO, A. F. G, CAMPOS, E. A. V."},
-						{"FERNANDES, M","POTTER, R; RAINER JR, R K.","FORBELLONE, L. V., EBERSPACHER, H. F."},{"ZIVIANI, Nivio."},
-						{""}};
+				String[][] matAutor = {{"BROWN, C. E.; PETRUSCA, R.", "FERNANDES, M."},
+						{"LAUDON, Kenneth C.; Laudon J.P.","TURBAN, E; POTTER, R; RAINER JR, R K."},
+						{"ASCENCIO, A. F. G, CAMPOS, E. A. V.","FORBELLONE, L. V., EBERSPACHER, H. F.","ZIVIANI, Nivio."},
+						{"STALLINGS, W.","TANENBAUM, A. S.","TOCCI, R. J."},
+						{"BATEMAN, T. S., SNELL, S. A. A.","CARAVANTES, G. R."},
+						{"SCHEINERMAN, E.R.", "SULLIVAN, Michael; MIZRAHI, Abe."},
+						{"CINTRA; CUNHA.","FERREIRA, Aurélio Buarque de Holanda.","MARTINS, D S; ZILBERKNOP."},
+						{"HUGES, John et al.","MURPHY, Raymond.", "POSITIVO INFORMÁTICA.", "RICHARDS, Jack C."}};
+				
 				int[] vetDisc = new int[qtdDisc];
 				for (int i = 0; i < vetDisc.length; i++) {
 					int[] qtdBiblio = qtdRefBiblio(semestre, qtdDisc);

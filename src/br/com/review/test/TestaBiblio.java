@@ -3,6 +3,7 @@ package br.com.review.test;
 import java.util.Scanner;
 
 import br.com.review.controller.MethodsReview;
+import br.com.review.model.ArqDados;
 import br.com.review.model.Bibliografia;
 
 public class TestaBiblio {
@@ -40,7 +41,7 @@ public class TestaBiblio {
 					{"Nova gramática do Português contemporâneo de acordo com a nova ortografia.","Novo Dicionário Aurélio da Língua Portuguesa.","Português Instrumental: de acordo com as atuais normas da ABNT."},
 					{"Business Result Business Result: Elementary Student Book Pack.","Essential Grammar in Use CD-Rom with answers. Third Edition.","Tell Me More – Nível Básico.","New Interchange: Student’s Book Intro. Third Edition."}};
 			
-					for (int i = 0; i < totalDisc; i++) {				
+			for (int i = 0; i < totalDisc; i++) {				
 				for (int j = 0; j < totalRefBiblio[i]; j++) {					
 					BIBLIO_AUTOR[i][j] = matAutor[i][j];
 					BIBLIO_TITULO[i][j] = matTitulo[i][j];
