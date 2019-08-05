@@ -1,8 +1,11 @@
 package br.com.review.controller;
 
+import java.util.Scanner;
+
 import br.com.review.model.Bibliografia;
 
 public class MethodsReview {
+	public static Scanner scan = new Scanner(System.in);
 	public static int contBibli = 0;
 
 	// Retorna total de disciplinas do semestre selecionado
@@ -219,7 +222,7 @@ public class MethodsReview {
 	}
 	
 	// Método retorna descrição das disciplinas
-		public static Bibliografia[][] gerenciaMatrizBibliografica(int semestre, int qtdDisc) {
+	public static Bibliografia[][] gerenciaMatrizBibliografica(int semestre, int qtdDisc) {
 			int itensBibio = 0;
 			Bibliografia[][] matBiblio = new Bibliografia[itensBibio][qtdDisc];
 			
@@ -250,4 +253,10 @@ public class MethodsReview {
 			
 		}
 
+	public static void menuBibliografia() {
+		System.out.println(" = = = Grava Bibliográfico em Arquivo = = = =\n");
+		System.out.println("Informe o semestre: ");
+		int semestre = scan.nextInt();
+	}
+	
 }
