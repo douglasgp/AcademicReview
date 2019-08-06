@@ -257,6 +257,7 @@ public class MethodsReview {
 		System.out.println(" = = = Grava Bibliográfico em Arquivo = = = =\n");
 		System.out.println("Informe o semestre: ");
 		int semestre = scan.nextInt();
+		
 	}
 	
 }
