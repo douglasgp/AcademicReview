@@ -2,47 +2,42 @@ package br.com.review.model;
 
 public class Bibliografia {
 
-	private String[] autor;
-	private String titulo;
-	private String editora;
-	private int ano;
+	private String[][] autor;
+	private String[][] titulo;
+	private String[][] editora;
+	private int[][] ano;
 	
-	public Bibliografia(String[] bAutor, String bTitulo, String bEditora, int bAno) {
-		autor = bAutor;
-		titulo = bTitulo;
-		editora = bEditora;
-		ano = bAno;
-	}
+	
 
-	public String getTitulo() {
+	public String[][] getTitulo() {
 		return titulo;
 	}
 
-	public void setTitulo(String titulo) {
+	public void setTitulo(String[][] titulo) {
 		this.titulo = titulo;
 	}
 
-	public String[] getAutor() {
+	public String[][] getAutor() {
 		return autor;
 	}
 
-	public void setAutor(String[] autor) {
-		this.autor = autor;
+	public void setAutor(String[][] matAutor) {
+		this.autor = matAutor;
 	}
 
-	public String getEditora() {
+	public String[][] getEditora() {
 		return editora;
 	}
 
-	public void setEditora(String editora) {
+	public void setEditora(String[][] editora) {
 		this.editora = editora;
 	}
 
-	public int getAno() {
+	public int[][] getAno() {
 		return ano;
 	}
 
-	public void setAno(int ano) {
+	public void setAno(int[][] ano) {
 		this.ano = ano;
 	}
 
