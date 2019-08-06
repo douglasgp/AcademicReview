@@ -10,13 +10,11 @@ public class TestaBiblio {
 	public static Scanner scan = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		insereBiblio();
+		
 	}
 	
-	public static void insereBiblio() {
-		System.out.println("Informe o semestre: ");
-		int semestre = scan.nextInt();
-
+	public static void insereBiblio(int semestre) {
+		
 		int totalDisc = MethodsReview.retornaTotalDisciplinas(semestre);
 		String[] siglaDisc = MethodsReview.siglaDisc(semestre, totalDisc);
 		int[] totalRefBiblio = MethodsReview.qtdRefBiblio(semestre, totalDisc);
@@ -59,11 +57,11 @@ public class TestaBiblio {
 		
 		int pag = totalDisc;
 		for (int i = 0; i < totalDisc; i++) {
-			System.out.println("= = = " + (i + 1) + "º disciplina: " + siglaDisc[i] + " = = = ");
-			System.out.printf("%2s | %-38.40S | %-36.44s | %-26.30S | %s", "ID"," AUTOR ", " TÍTULO ", " EDITORA ", " ANO ");
+			System.out.println((i + 1) + "º disciplina: " + siglaDisc[i] + " = = = ");
+			System.out.printf("%2s | %-38.40S | %-46.45s | %-26.30S | %s", "ID"," AUTOR ", " TÍTULO ", " EDITORA ", " ANO ");
 			System.out.println();
 			for (int j = 0; j < totalRefBiblio[i]; j++) {
-				System.out.printf("%2s | %-38.40S | %-36.44S | %-26.30S | %s",(j + 1), MAT_AUTOR.getAutor()[i][j], MAT_AUTOR.getTitulo()[i][j], MAT_AUTOR.getEditora()[i][j], MAT_AUTOR.getAno()[i][j]);
+				System.out.printf("%2s | %-38.40S | %-46.45S | %-26.30S | %s",(j + 1), MAT_AUTOR.getAutor()[i][j], MAT_AUTOR.getTitulo()[i][j], MAT_AUTOR.getEditora()[i][j], MAT_AUTOR.getAno()[i][j]);
 				System.out.println();
 			}
 			System.out.println();

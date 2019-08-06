@@ -19,6 +19,7 @@ public class TestaObjeto01 {
 		menuPrincipal();
 	}
 	
+	
 	public static void exibeSemestre() {
 		if(NOMES_DISCIPLINAS.length > 0) {
 			for (int i = 0; i < DISC_SEM_ATUAL.length; i++) {
@@ -30,10 +31,12 @@ public class TestaObjeto01 {
 		}
 	}
 	
+	// Função para carregar informações básicas de disciplinas em variáveis e vetores localizadas em outras funções na mesma classe
 	public static void carregaSemestre() {
 		System.out.println("Informe o semestre: ");
+		// Armazena semestre informado em variável simples
 		int semestre = scan.nextInt();
-
+		
 		TOTAL_DISC_SEMESTRE = MethodsReview.retornaTotalDisciplinas(semestre);
 
 		int horasDiscSemestre[] = MethodsReview.cargaHorariaSemestre(semestre, TOTAL_DISC_SEMESTRE);
@@ -77,6 +80,7 @@ public class TestaObjeto01 {
 		menuPrincipal();
 	}
 	
+	// Função simples para exibição de menu com opções para outras funções
 	public static void menuPrincipal() {
 		int opcao = 0;
 		do {
