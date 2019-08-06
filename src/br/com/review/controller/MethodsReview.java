@@ -223,12 +223,12 @@ public class MethodsReview {
 	
 	// Método retorna descrição das disciplinas
 	public static Bibliografia[][] gerenciaMatrizBibliografica(int semestre, int qtdDisc) {
-			int itensBibio = 0;
-			Bibliografia[][] matBiblio = new Bibliografia[itensBibio][qtdDisc];
+			int itensBiblio = 0;
+			Bibliografia[][] matBiblio = new Bibliografia[itensBiblio][qtdDisc];
 			
-			Bibliografia[] vetTitulo = new Bibliografia[itensBibio];
-			Bibliografia[] vetEditora = new Bibliografia[itensBibio];
-			Bibliografia[] vetAno = new Bibliografia[itensBibio];
+			Bibliografia[] vetTitulo = new Bibliografia[itensBiblio];
+			Bibliografia[] vetEditora = new Bibliografia[itensBiblio];
+			Bibliografia[] vetAno = new Bibliografia[itensBiblio];
 			if(semestre == 1) {
 				String[][] matAutor = {{"BROWN, C. E.; PETRUSCA, R.", "FERNANDES, M."},
 						{"LAUDON, Kenneth C.; Laudon J.P.","TURBAN, E; POTTER, R; RAINER JR, R K."},

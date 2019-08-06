@@ -23,6 +23,7 @@ public class TestaBiblio {
 		// String[][] vetAutor = new String[totalDisc][totalRefBiblio.length];
 		String[][] BIBLIO_AUTOR = new String[totalDisc][totalRefBiblio.length];
 		String[][] BIBLIO_TITULO = new String[totalDisc][totalRefBiblio.length];
+		Bibliografia MAT_AUTOR = new Bibliografia();
 		if(semestre == 1) {
 			String[][] matAutor = {{"BROWN, C. E.; PETRUSCA, R.", "FERNANDES, M."},
 					{"LAUDON, Kenneth C.; Laudon J.P.","TURBAN, E; POTTER, R; RAINER JR, R K."},
@@ -40,36 +41,34 @@ public class TestaBiblio {
 					{"Matemática Discreta: Uma Introdução. São Paulo:","Matemática Finita – Uma abordagem aplicada."},
 					{"Nova gramática do Português contemporâneo de acordo com a nova ortografia.","Novo Dicionário Aurélio da Língua Portuguesa.","Português Instrumental: de acordo com as atuais normas da ABNT."},
 					{"Business Result Business Result: Elementary Student Book Pack.","Essential Grammar in Use CD-Rom with answers. Third Edition.","Tell Me More – Nível Básico.","New Interchange: Student’s Book Intro. Third Edition."}};
-			
-			for (int i = 0; i < totalDisc; i++) {				
-				for (int j = 0; j < totalRefBiblio[i]; j++) {					
-					BIBLIO_AUTOR[i][j] = matAutor[i][j];
-					BIBLIO_TITULO[i][j] = matTitulo[i][j];
-				}
-			}
+			String[][] matEditora = {{"Alta Books","Visual Books,"},
+					{"LTC","Campus"},
+					{"Longman","Prentice Hall","Thomson Pioneira"},
+					{"Prentice-Hall Brasil","Prentice Hall","Pearson Brasil"},
+					{"S P: Atlas","São Paulo: Pear"},
+					{"Cengage Learning","LTC,"},
+					{"Lexikon","Positivo","Atlas"},
+					{"Oxford Univ","Cambridge","Curitiba","Cambridge University Press"}};
+			int[][] matAno = {{2006, 2005},{2004, 2007},{2007,2005,2004},{2008,2007,2007},{2006,0},
+					{2008,2006},{2009,2009,2009},{2009,2007,2007,2008}};
+			MAT_AUTOR.setAutor(matAutor);
+			MAT_AUTOR.setTitulo(matTitulo);
+			MAT_AUTOR.setEditora(matEditora);
+			MAT_AUTOR.setAno(matAno);
 		}
 		
-		
+		int pag = totalDisc;
 		for (int i = 0; i < totalDisc; i++) {
 			System.out.println("= = = " + (i + 1) + "º disciplina: " + siglaDisc[i] + " = = = ");
-			System.out.printf("%2s | %16s | %14.30s", "ID"," AUTOR ", " TÍTULO ");
+			System.out.printf("%2s | %-38.40S | %-36.44s | %-26.30S | %s", "ID"," AUTOR ", " TÍTULO ", " EDITORA ", " ANO ");
 			System.out.println();
 			for (int j = 0; j < totalRefBiblio[i]; j++) {
-				System.out.printf("%2s | %16S | %14.30s",(j + 1), BIBLIO_AUTOR[i][j], BIBLIO_TITULO[i][j]);
+				System.out.printf("%2s | %-38.40S | %-36.44S | %-26.30S | %s",(j + 1), MAT_AUTOR.getAutor()[i][j], MAT_AUTOR.getTitulo()[i][j], MAT_AUTOR.getEditora()[i][j], MAT_AUTOR.getAno()[i][j]);
 				System.out.println();
 			}
 			System.out.println();
 		}
 		
-		/*
-		for (int i = 0; i < totalDisc; i++) {
-			System.out.println("Disciplina: " + siglaDisc[i]);
-			for (int j = 0; j < totalRefBiblio[i]; j++) {
-				System.out.println(vetAutor[i][j]);
-			}
-			System.out.println();
-		}
-		Bibliografia[] biblio = {"Alberto", bTitulo, bEditora, bAno};*/
 	}
 
 	public static void testaExibeAutor() {
