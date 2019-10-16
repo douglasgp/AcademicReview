@@ -3,7 +3,7 @@ package br.com.review.model;
 public class Aluno {
 
 	private int id;
-	private int nomeAluno;
+	private String nomeAluno;
 	private String email;
 	private String nomeCurso;
 
@@ -15,11 +15,11 @@ public class Aluno {
 		this.id = id;
 	}
 
-	public int getNomeAluno() {
+	public String getNomeAluno() {
 		return nomeAluno;
 	}
 
-	public void setNomeAluno(int nomeAluno) {
+	public void setNomeAluno(String nomeAluno) {
 		this.nomeAluno = nomeAluno;
 	}
 
@@ -37,6 +37,17 @@ public class Aluno {
 
 	public void setNomeCurso(String nomeCurso) {
 		this.nomeCurso = nomeCurso;
+	}
+
+	/* Exibe alunos */
+	public String toString() {
+		return this.nomeAluno;
+	}
+
+	/* Compara objetos utilizando nome do aluno como critério */
+	public boolean equals(Object o) {
+		Aluno outro = (Aluno) o;
+		return this.nomeAluno.contentEquals(outro.nomeAluno);
 	}
 
 }
