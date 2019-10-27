@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Scanner;
 
-import br.com.review.model.Curso;
+import br.com.review.model.Course;
 import br.com.review.model.Disciplinas;
 
 public class GeradorDatas {
@@ -187,8 +187,8 @@ public class GeradorDatas {
 		
 		TOTAL_DISCIPLINA = retornaTotalDisciplinas(SEMESTRE);
 		
-		Curso.TOTAL_DISCIPLINA = GeradorDatas.retornaTotalDisciplinas(SEMESTRE);
-		System.out.println("Total de disciplinas: " + Curso.TOTAL_DISCIPLINA);
+		Course.TOTAL_DISCIPLINA = GeradorDatas.retornaTotalDisciplinas(SEMESTRE);
+		System.out.println("Total de disciplinas: " + Course.TOTAL_DISCIPLINA);
 
 		// -- LISTA_DISCIPLINA = GeradorDatas.cargaHorariaSemestre(SEMESTRE);
 
