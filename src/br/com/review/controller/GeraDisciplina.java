@@ -2,7 +2,7 @@ package br.com.review.controller;
 
 import java.util.Scanner;
 
-import br.com.review.model.Curso;
+import br.com.review.model.Course;
 
 public class GeraDisciplina {
 	public static Scanner scan = new Scanner(System.in);
